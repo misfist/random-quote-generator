@@ -29,6 +29,9 @@ $(document).ready(function() {
             var blockquoteEl = $('<blockquote>');
             var quoteEl = $( '<p class="quote-text">' );
             var citeEl = $( '<cite class="quote-author">' );
+            var twitterButton = $( '<a id="tweet-link" class="btn tweet-this" target="_blank"><i class="fa fa-twitter"></i> Tweet This</a>' );
+            var twitterLink = 'http://twitter.com/home/?status=' + data.quoteText;
+
             quoteEl.append( data.quoteText );
 
             if ( data.quoteAuthor ) {
@@ -40,8 +43,12 @@ $(document).ready(function() {
             if ( data.quoteAuthor ) {
                 blockquoteEl.append( citeEl );
             }
+
+            blockquoteEl.append( twitterButton );
+            twitterButton.attr( 'href', twitterLink );
             
             mainEl.append( blockquoteEl );
+
             
         })
         .fail(function( data ) {

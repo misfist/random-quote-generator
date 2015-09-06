@@ -172,6 +172,9 @@ blockquote {
   font-size: 24px;
   background-color: #677743;
   color: #fff; }
+  .btn.tweet-this {
+    background-color: #434343;
+    font-size: 18px; }
   .btn a,
   .btn a:link {
     color: #fff; }

@@ -236,6 +236,11 @@ blockquote {
   background-color: $accent;
   color: $white;
 
+  &.tweet-this {
+    background-color: $secondary-dark;
+    font-size: 18px;
+  }
+
   a,
   a:link {
     color: $white;
