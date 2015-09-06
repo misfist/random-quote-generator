@@ -9,7 +9,7 @@ $(document).ready(function() {
         console.log('clicked');
 
         $.ajax({
-            url: 'data/quotes',
+            url: 'data/quotes.json',
         })
         .success(function(data, x) {
             var quotes = data[0].quotes;
