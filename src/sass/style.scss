@@ -1,0 +1,353 @@
+
+@import 'reset';
+
+// Variables
+
+$primary: #2F4550;
+$primary-dark: #2D2D2D;
+$primary-light: #989898;
+$secondary: #677743;
+$secondary-dark: #434343;
+$secondary-light: #E2E2E1;
+$tertiary: $secondary;
+$accent: #B94019;
+
+$white: #fff;
+$black: #333;
+
+// Extends
+%fake-browser-ui {
+  .frame {
+    display: block;
+    height: 15px;
+    position: absolute;
+    top: 5px;
+    left: 1px;
+  }
+  
+  span {
+    height: 8px;
+    width: 8px;
+    border-radius: 8px;
+    background-color: #eee;
+    border: 1px solid #dadada;
+    float: left;
+    margin: 0 0 0 4px;
+  }
+}
+
+%header {
+  font-family: 'Montserrat', sans-serif;
+  color: $white;
+  text-shadow: 1px 1px 1px $black;
+  text-shadow: -1px -1px -1px $primary-light;
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+%text-background {
+    padding: 10px;
+    background: transparentize($primary-dark, .7);
+}
+
+
+html,
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  height: 100%;
+  min-height: 100%;
+  background-color: $primary-light;
+}
+
+// Block Elements
+h1,
+h2 {
+  @extend %header;
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 46px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+section {
+  @extend %clearfix;
+  width: 100%;
+  min-height: 100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  min-height: 700px;
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media only screen and (min-width : 768px) {
+  section {
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+// Main Sections
+
+.container {
+  @extend %clearfix;
+}
+
+#main-nav {
+  background-color: $primary;
+
+  a,
+  a:link {
+    color: $white;
+  }
+}
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+  #main-nav {
+    .navbar-nav {
+      float: right;
+    }
+  }
+
+}
+
+#home {
+  padding-top: 240px;
+  background-image: url('https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg');
+
+  header {
+    @extend %text-background;
+    padding: 20px;
+  }
+
+  h1,
+  h2 {
+      margin: 0;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+
+  nav {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid $white;
+    box-shadow: 0px -1px 0px 0px $black;
+  }
+
+}
+
+#about {
+  background-image: url('http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg');
+  
+  h1 {
+    @extend %text-background;
+  }
+
+  article {
+    @extend %text-background;
+    padding: 20px;
+  }
+
+  p {
+    @extend %header;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .image-border {
+    text-align: center;
+    max-width: 75%;
+  }
+}
+
+#portfolio {
+  background-image: url('http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w');
+  
+  height: 100%;
+  min-height: 900px !important;
+
+  header {
+    @extend %text-background;
+  }
+
+  li {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .img-background {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      box-shadow: 1px 1px 0px 0px $primary-dark;
+
+      &.al-diaz {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/al-diaz.png');
+      }
+      &.nyc-prepared {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/nyc-prepared.png');
+      }
+      &.action-switchboard {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/action-switchboard.png');
+      }
+      &.seeing-more-possibilities {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/seeing-more-possibilities.png');
+      }
+      &.glocal {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/glocal.png');
+      }
+      &.yes-men-are-revolting {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/yes-men-are-revolting.png');
+      }
+      &.sfic {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/sfic.png');
+      }
+      &.biz-decals{
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/1010-biz-decals.png');
+      }
+
+    }
+
+    .overlay {
+      display: table;
+      width: 100%;
+      height: 220px;
+      background: transparentize($primary, .2);
+      text-align: center;
+      opacity: 0;
+      transition: opacity .25s ease;
+      -webkit-transition: opacity .25s ease;
+      -moz-transition: opacity .25s ease;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+
+      .plus {
+        @extend %header;
+        font-size: 24px;
+        color: $white;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+
+    .plus {
+      font-size: 36px;
+    }
+
+  }
+
+}
+
+#contact {
+  background-image: url('http://www.magic4walls.com/wp-content/uploads/2014/02/city-new-york-vintage-photography-skyscrapers-evening-hd-wallpaper.jpg');
+
+  h1 {
+    @extend %text-background;
+  }
+  .social-links {
+    li {
+      padding: 5px 0;
+    }
+  }
+}
+
+footer {
+  @extend %clearfix;
+  background-color: $primary-dark;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: $white;
+  a,
+  a:link {
+    color: $white;
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
+// Common Elements
+
+em {
+  font-style: italic;
+}
+
+p + p {
+  padding-top: 20px;
+}
+
+.btn {
+  box-shadow: 1px 1px 0px 0px $primary-light;
+  transition: all .2s ease-in-out;
+  @extend %header;
+
+  background-color: $accent;
+  color: $white;
+
+  a,
+  a:link {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    transform: scale(1.1);
+  }
+}
+
+
+// Specific Elements
+.navbar-brand {
+  margin: 0;
+  a,
+  a:link {
+    color: $white;
+  }
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: $white;
+}
+
+.image-border {
+  border: 15px solid $accent;
+  border-radius: 50%;
+}
+
+.social-links {
+  li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
