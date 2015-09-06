@@ -1,21 +1,28 @@
-$('a[href^="#"]').on('click', function(event) {
+$(document).ready(function() {
 
-    // Add active class
-    $('li').removeClass('active');
-    $(this).closest('li').addClass('active');
- 
-    // Check if mobile menu is visible
-    var pageOffset = ( $('.navbar-toggle').css('display') == 'none' ) ? (30) : (205);
+    console.log('main.js');
 
-    // Get target
-    var target = $( $(this).attr('href') );
+    $('#quote').find('blockquote').hide();
 
-    //Move to target (-30)
-    if( target.length ) {
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: target.offset().top - pageOffset
-        }, 800, 'swing');
-    }
+    $('#quote-button').click(function() {
+
+        console.log('clicked');
+
+        $.ajax({
+            url: 'data/quotes',
+        })
+        .success(function(data, x) {
+            var quotes = data[0].quotes;
+            var length = quotes.length;
+            var random = Math.floor( Math.random() * length );
+
+            $('#quote').find('blockquote').show();
+            $('#quote').find('blockquote').html(quotes[random]);
+
+            console.log('random', random);
+        });
+
+    });
 
 });
+

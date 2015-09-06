@@ -31,37 +31,55 @@ table {
   border-spacing: 0; }
 
 h1,
-h2, #about p, #portfolio li .overlay .plus, .btn {
+h2, .btn {
   font-family: 'Montserrat', sans-serif;
-  color: #fff;
-  text-shadow: 1px 1px 1px #333;
-  text-shadow: -1px -1px -1px #989898; }
+  color: #992117;
+  text-shadow: 2px 2px 1px #333;
+  text-shadow: -2px -2px -1px #D7D4D4; }
 
-section:after, .container:after, footer:after {
+.bubble:after, blockquote:after, section:after, .container:after, footer:after {
   content: "";
   display: table;
   clear: both; }
 
-#home header, #about h1, #about article, #portfolio header, #contact h1 {
-  padding: 10px;
-  background: rgba(45, 45, 45, 0.3); }
+.bubble, blockquote {
+  position: relative;
+  width: 75%;
+  min-height: 145px;
+  padding: 20px;
+  background: rgba(103, 119, 67, 0.7);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px; }
+  .bubble:after, blockquote:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 15px 0 15px 28px;
+    border-color: transparent #677743;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-top: -15px;
+    right: -28px;
+    top: 34%; }
 
 html,
 body {
   font-family: 'Helvetica', 'Arial', sans-serif;
   height: 100%;
   min-height: 100%;
-  background-color: #989898; }
+  background-color: #D7D4D4; }
 
 h1,
 h2 {
   margin: 10px 0; }
 
 h1 {
-  font-size: 46px; }
+  font-size: 60px; }
 
 h2 {
-  font-size: 30px; }
+  font-size: 40px; }
 
 section {
   width: 100%;
@@ -69,7 +87,7 @@ section {
   padding-top: 2em;
   padding-bottom: 2em;
   min-height: 700px;
-  background-position: center;
+  background-position: top;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-attachment: fixed; }
@@ -80,7 +98,7 @@ section {
     height: 100vh; } }
 
 #main-nav {
-  background-color: #2F4550; }
+  background-color: #AA3228; }
   #main-nav a,
   #main-nav a:link {
     color: #fff; }
@@ -91,8 +109,8 @@ section {
     float: right; } }
 
 #home {
-  padding-top: 240px;
-  background-image: url("https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg"); }
+  padding-top: 100px;
+  background-image: url("http://learning.site/quote-generator/assets/images/oscar_the_grouch.jpg"); }
   #home header {
     padding: 20px; }
   #home h1,
@@ -106,76 +124,8 @@ section {
     border-top: 2px solid #fff;
     box-shadow: 0px -1px 0px 0px #333; }
 
-#about {
-  background-image: url("http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg"); }
-  #about article {
-    padding: 20px; }
-  #about p {
-    font-size: 20px;
-    line-height: 30px; }
-  #about .image-border {
-    text-align: center;
-    max-width: 75%; }
-
-#portfolio {
-  background-image: url("http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w");
-  height: 100%;
-  min-height: 900px !important;
-  /* Small Devices, Tablets */ }
-  #portfolio li {
-    padding-top: 10px;
-    padding-bottom: 10px; }
-    #portfolio li .img-background {
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      overflow: hidden;
-      box-shadow: 1px 1px 0px 0px #2D2D2D; }
-      #portfolio li .img-background.al-diaz {
-        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/al-diaz.png"); }
-      #portfolio li .img-background.nyc-prepared {
-        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/nyc-prepared.png"); }
-      #portfolio li .img-background.action-switchboard {
-        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/action-switchboard.png"); }
-      #portfolio li .img-background.seeing-more-possibilities {
-        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/seeing-more-possibilities.png"); }
-      #portfolio li .img-background.glocal {
-        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/glocal.png"); }
-      #portfolio li .img-background.yes-men-are-revolting {
-        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/yes-men-are-revolting.png"); }
-      #portfolio li .img-background.sfic {
-        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/sfic.png"); }
-      #portfolio li .img-background.biz-decals {
-        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/1010-biz-decals.png"); }
-    #portfolio li .overlay {
-      display: table;
-      width: 100%;
-      height: 220px;
-      background: rgba(47, 69, 80, 0.8);
-      text-align: center;
-      opacity: 0;
-      transition: opacity 0.25s ease;
-      -webkit-transition: opacity 0.25s ease;
-      -moz-transition: opacity 0.25s ease; }
-      #portfolio li .overlay:hover,
-      #portfolio li .overlay:focus {
-        opacity: 1; }
-      #portfolio li .overlay .plus {
-        font-size: 24px;
-        color: #fff;
-        display: table-cell;
-        vertical-align: middle; }
-  @media only screen and (min-width: 768px) {
-    #portfolio .plus {
-      font-size: 36px; } }
-
-#contact {
-  background-image: url("http://www.magic4walls.com/wp-content/uploads/2014/02/city-new-york-vintage-photography-skyscrapers-evening-hd-wallpaper.jpg"); }
-  #contact .social-links li {
-    padding: 5px 0; }
-
 footer {
-  background-color: #2D2D2D;
+  background-color: #992117;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #fff; }
@@ -191,13 +141,27 @@ footer {
 em {
   font-style: italic; }
 
-p + p {
-  padding-top: 20px; }
+article {
+  margin-top: 100px; }
+
+blockquote {
+  width: 75%;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px; }
+  blockquote p {
+    line-height: 2;
+    color: #fff; }
+  blockquote p + p {
+    padding-top: 0;
+    padding-bottom: 0; }
 
 .btn {
-  box-shadow: 1px 1px 0px 0px #989898;
+  margin-top: 20px;
+  box-shadow: 1px 1px 0px 0px #D7D4D4;
   transition: all 0.2s ease-in-out;
-  background-color: #B94019;
+  font-size: 24px;
+  background-color: #677743;
   color: #fff; }
   .btn a,
   .btn a:link {
@@ -217,7 +181,7 @@ p + p {
   border-color: #fff; }
 
 .image-border {
-  border: 15px solid #B94019;
+  border: 15px solid #677743;
   border-radius: 50%; }
 
 .social-links li {
