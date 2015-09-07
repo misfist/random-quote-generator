@@ -31,7 +31,7 @@ table {
   border-spacing: 0; }
 
 h1,
-h2, .btn, blockquote {
+h2, .btn, article blockquote {
   text-shadow: 2px 2px 1px #434343;
   text-shadow: -2px -2px -1px #D7D4D4; }
 
@@ -40,12 +40,12 @@ h2, .btn {
   font-family: "Sigmar One", serif;
   color: #AA3228; }
 
-.bubble:after, blockquote:after, section:after, .container:after, footer:after, blockquote cite:after {
+.bubble:after, article blockquote:after, section:after, .container:after, footer:after, article blockquote cite:after {
   content: "";
   display: table;
   clear: both; }
 
-.bubble, blockquote {
+.bubble, article blockquote {
   position: relative;
   width: 75%;
   min-height: 145px;
@@ -54,7 +54,7 @@ h2, .btn {
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px; }
-  .bubble:after, blockquote:after {
+  .bubble:after, article blockquote:after {
     content: '';
     position: absolute;
     border-style: solid;
@@ -153,27 +153,30 @@ em {
   font-style: italic; }
 
 article {
-  margin-top: 100px; }
+  margin-top: 20px; }
+  article blockquote {
+    width: 75%;
+    font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+    font-size: 20px; }
+    article blockquote p {
+      line-height: 1.3;
+      color: #fff; }
+    article blockquote p + p {
+      padding-top: 0;
+      padding-bottom: 0; }
+    article blockquote cite {
+      float: right;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: #fff;
+      font-style: italic; }
+      article blockquote cite:before {
+        content: '~'; }
 
-blockquote {
-  width: 75%;
-  font-family: "Montserrat", "Helvetica", Arial, sans-serif;
-  font-size: 20px; }
-  blockquote p {
-    line-height: 1.3;
-    color: #fff; }
-  blockquote p + p {
-    padding-top: 0;
-    padding-bottom: 0; }
-  blockquote cite {
-    float: right;
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #fff;
-    font-style: italic; }
-    blockquote cite:before {
-      content: '~'; }
+@media only screen and (min-width: 768px) {
+  article {
+    margin-top: 100px; } }
 
 .btn {
   margin-top: 20px;
