@@ -70,9 +70,8 @@ h2, .btn {
 html,
 body {
   font-family: "Helvetica", Arial, sans-serif;
-  height: 100%;
   min-height: 100%;
-  transition: .2s; }
+  height: 100%; }
 
 body {
   /* Location of the image */
@@ -89,7 +88,8 @@ body {
   background-size: cover;
   /* Set a background color that will be displayed
      while the background image is loading */
-  background-color: #D7D4D4; }
+  background-color: #D7D4D4;
+  overflow-y: scroll; }
 
 @media only screen and (min-width: 768px) {
   body {
