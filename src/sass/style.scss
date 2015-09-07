@@ -117,7 +117,7 @@ body {
   background-image: url('http://learning.site/quote-generator/assets/images/oscar_the_grouch_sm.jpg');
   
   /* Background image is centered vertically and horizontally at all times */
-  background-position: center center;
+  background-position: top;
   
   /* Background image doesn't tile */
   background-repeat: no-repeat;
@@ -136,7 +136,10 @@ body {
 }
 
 @media only screen and (min-width : 768px) {
-  background-image: url('http://learning.site/quote-generator/assets/images/oscar_the_grouch.jpg');
+  body {
+    background-position: top;
+    background-image: url('http://learning.site/quote-generator/assets/images/oscar_the_grouch.jpg');
+  }
 }
 
 // Block Elements

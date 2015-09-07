@@ -78,7 +78,7 @@ body {
   /* Location of the image */
   background-image: url("http://learning.site/quote-generator/assets/images/oscar_the_grouch_sm.jpg");
   /* Background image is centered vertically and horizontally at all times */
-  background-position: center center;
+  background-position: top;
   /* Background image doesn't tile */
   background-repeat: no-repeat;
   /* Background image is fixed in the viewport so that it doesn't move when 
@@ -92,7 +92,9 @@ body {
   background-color: #D7D4D4; }
 
 @media only screen and (min-width: 768px) {
-  background-image: url("http://learning.site/quote-generator/assets/images/oscar_the_grouch.jpg"); }
+  body {
+    background-position: top;
+    background-image: url("http://learning.site/quote-generator/assets/images/oscar_the_grouch.jpg"); } }
 
 h1,
 h2 {
