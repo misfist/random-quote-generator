@@ -76,7 +76,7 @@ body {
 
 body {
   /* Location of the image */
-  background-image: url("http://learning.site/quote-generator/assets/images/oscar_the_grouch_small.jpg");
+  background-image: url("http://learning.site/quote-generator/assets/images/oscar_the_grouch_sm.jpg");
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
   /* Background image doesn't tile */
