@@ -3,25 +3,36 @@
 
 // Variables
 
-$primary: #AA3228;
+$primary: #AE9D35;
 $primary-dark: #992117;
 $primary-light: #D7D4D4;
-$secondary: #677743;
+$secondary: #AA3228;
 $secondary-dark: #434343;
 $secondary-light: #E2E2E1;
 $tertiary: $secondary;
 $accent: $secondary;
 
 $white: #fff;
-$black: #333;
+$black: #111;
+
+// Fonts
+$serif: 'Sigmar One', serif;
+$sans-serif: 'Helvetica', Arial, sans-serif;
+$montserrat: 'Montserrat', $sans-serif;
+$heading: $serif;
+$body-text: $sans-serif;
 
 // Extends
 
+%text-shadow {
+  text-shadow: 2px 2px 1px $secondary-dark;
+  text-shadow: -2px -2px -1px $primary-light;  
+}
+
 %header {
-  font-family: 'Montserrat', sans-serif;
-  color: $primary-dark;
-  text-shadow: 2px 2px 1px $black;
-  text-shadow: -2px -2px -1px $primary-light;
+  @extend %text-shadow;
+  font-family: $heading;
+  color: $secondary;
 }
 
 %clearfix {
@@ -42,11 +53,9 @@ $black: #333;
   position: relative;
   width: 75%;
   min-height: 145px;
-  // height: auto;
   @extend %clearfix;
   padding: 20px;
-  background: transparentize($accent, .3);
-  //background: $accent;
+  background: transparentize($primary, .3);
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -56,7 +65,7 @@ $black: #333;
       position: absolute;
       border-style: solid;
       border-width: 15px 0 15px 28px;
-      border-color: transparent $accent;
+      border-color: transparent $primary;
       display: block;
       width: 0;
       z-index: 1;
@@ -67,10 +76,9 @@ $black: #333;
 
 }
 
-
 html,
 body {
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: $body-text;
   height: 100%;
   min-height: 100%;
   background-color: $primary-light;
@@ -84,7 +92,7 @@ h2 {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 85px;
 }
 
 h2 {
@@ -144,16 +152,12 @@ section {
 
   header {
     //@extend %text-background;
-    padding: 20px;
+    // padding: 20px;
   }
 
   h1,
   h2 {
       margin: 0;
-  }
-
-  h1 {
-    font-size: 46px;
   }
 
   nav {
@@ -196,10 +200,10 @@ article {
 
 blockquote {
   width: 75%;
-  margin: 0 auto;
   
-  font-family: 'Montserrat', sans-serif;
+  font-family: $montserrat;
   font-size: 20px;
+  @extend %text-shadow;
   @extend .bubble;
 
   p {
@@ -233,12 +237,16 @@ blockquote {
   @extend %header;
   font-size: 24px;
 
-  background-color: $accent;
+  background-color: $secondary;
   color: $white;
 
   &.tweet-this {
     background-color: $secondary-dark;
     font-size: 18px;
+    &:hover,
+    &:focus {
+      background-color: $secondary;
+    }
   }
 
   a,
@@ -248,6 +256,7 @@ blockquote {
 
   &:hover,
   &:focus {
+    background-color: $primary;
     color: $white;
     transform: scale(1.1);
   }
