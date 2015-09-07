@@ -131,8 +131,6 @@ section {
 
 footer {
   background-color: #992117;
-  bottom: 0;
-  position: absolute;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -145,6 +143,11 @@ footer {
     footer a:link:hover,
     footer a:link:focus {
       color: #fff; }
+
+@media only screen and (min-width: 768px) {
+  footer {
+    bottom: 0;
+    position: absolute; } }
 
 em {
   font-style: italic; }

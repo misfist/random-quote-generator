@@ -182,8 +182,6 @@ section {
 footer {
   @extend %clearfix;
   background-color: $primary-dark;
-  bottom: 0;
-  position: absolute;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -196,6 +194,14 @@ footer {
     &:focus {
       color: $white;
     }
+  }
+}
+
+// Sticky footer
+@media only screen and (min-width : 768px) {
+  footer {
+    bottom: 0;
+    position: absolute;
   }
 }
 
