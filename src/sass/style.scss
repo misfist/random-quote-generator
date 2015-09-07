@@ -92,11 +92,21 @@ h2 {
 }
 
 h1 {
-  font-size: 85px;
+  font-size: 45px;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 28px;
+}
+
+@media only screen and (min-width : 768px) {
+  h1 {
+    font-size: 85px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
 }
 
 section {
@@ -110,12 +120,12 @@ section {
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 @media only screen and (min-width : 768px) {
   section {
     background-size: cover;
-    height: 100vh;
   }
 }
 
