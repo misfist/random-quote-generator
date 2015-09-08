@@ -32,13 +32,13 @@ table {
 
 h1,
 h2, .btn, article blockquote {
-  text-shadow: 2px 2px 1px #434343;
-  text-shadow: -2px -2px -1px #D7D4D4; }
+  text-shadow: 2px 2px 1px #848083;
+  text-shadow: -2px -2px -1px #DED4DD; }
 
 h1,
 h2, .btn {
   font-family: "Sigmar One", serif;
-  color: #AA3228; }
+  color: #690360; }
 
 .bubble:after, article blockquote:after, section:after, .container:after, footer:after, article blockquote cite:after {
   content: "";
@@ -79,7 +79,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #D7D4D4; }
+  background-color: #DED4DD; }
 
 @media only screen and (min-width: 768px) {
   body {
@@ -140,7 +140,7 @@ section {
     box-shadow: 0px -1px 0px 0px #111; }
 
 footer {
-  background-color: #992117;
+  background-color: #750B6C;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -195,25 +195,29 @@ article {
 
 .btn {
   margin-top: 20px;
-  box-shadow: 1px 1px 0px 0px #D7D4D4;
+  box-shadow: 1px 1px 0px 0px #DED4DD;
   transition: all 0.2s ease-in-out;
   font-size: 24px;
-  background-color: #AA3228;
+  background-color: #690360;
   color: #fff; }
   .btn.tweet-this {
-    background-color: #434343;
+    background-color: #848083;
     font-size: 18px; }
     .btn.tweet-this:hover,
     .btn.tweet-this:focus {
-      background-color: #AA3228; }
+      background-color: #690360; }
   .btn a,
   .btn a:link {
     color: #fff; }
   .btn:hover,
   .btn:focus {
     background-color: #AE9D35;
+    border-color: #690360;
     color: #fff;
     transform: scale(1.1); }
+
+.btn-danger {
+  border-color: #AE9D35; }
 
 .navbar-brand {
   margin: 0; }
@@ -225,7 +229,7 @@ article {
   border-color: #fff; }
 
 .image-border {
-  border: 15px solid #AA3228;
+  border: 15px solid #690360;
   border-radius: 50%; }
 
 .social-links li {

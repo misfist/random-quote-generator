@@ -3,12 +3,18 @@
 
 // Variables
 
+// $color-primary-0: #750B6C;  // Main Primary color */
+// $color-primary-1: #690360;
+// $color-primary-2: #040404;
+// $color-primary-3: #DED4DD;
+// $color-primary-4: #848083;
+
 $primary: #AE9D35;
-$primary-dark: #992117;
-$primary-light: #D7D4D4;
-$secondary: #AA3228;
-$secondary-dark: #434343;
-$secondary-light: #E2E2E1;
+$primary-dark: #750B6C;
+$primary-light: #DED4DD;
+$secondary: #690360;
+$secondary-dark: #848083;
+$secondary-light: #DED4DD;
 $tertiary: $secondary;
 $accent: $secondary;
 
@@ -330,11 +336,15 @@ article {
   &:hover,
   &:focus {
     background-color: $primary;
+    border-color: $secondary;
     color: $white;
     transform: scale(1.1);
   }
 }
 
+.btn-danger {
+  border-color: $primary;
+}
 
 // Specific Elements
 .navbar-brand {
